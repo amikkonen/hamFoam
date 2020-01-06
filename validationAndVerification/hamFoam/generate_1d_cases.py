@@ -266,10 +266,6 @@ def gen_case(source, target_root, template):
     with open(source, "r") as ifile:
         data = json.load(ifile)
     
-    
-    print([data["label"] for data  in data["materials"]])
-    return 
-    
     target = os.path.join(target_root, data["id"])
     print(target)
     

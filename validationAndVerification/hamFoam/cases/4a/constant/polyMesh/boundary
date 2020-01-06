@@ -1,9 +1,9 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  dev
-     \\/     M anipulation  |
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
@@ -21,20 +21,20 @@ FoamFile
     {
         type            patch;
         nFaces          1;
-        startFace       214;
+        startFace       222;
     }
     cavityInsideSurface
     {
         type            patch;
         nFaces          1;
-        startFace       215;
+        startFace       223;
     }
     side
     {
         type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          860;
-        startFace       216;
+        inGroups        1(empty);
+        nFaces          892;
+        startFace       224;
     }
 )
 
