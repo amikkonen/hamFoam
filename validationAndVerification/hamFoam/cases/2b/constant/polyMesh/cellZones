@@ -1,9 +1,9 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  dev                                   |
-|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
@@ -21,7 +21,7 @@ C1
 {
     type cellZone;
 cellLabels      List<label> 
-16
+14
 (
 0
 1
@@ -37,8 +37,6 @@ cellLabels      List<label>
 11
 12
 217
-218
-219
 )
 ;
 }
@@ -46,14 +44,14 @@ cellLabels      List<label>
 C11
 {
     type cellZone;
-cellLabels      List<label> 2(13 220);
+cellLabels      List<label> 2(13 218);
 }
 
 D2
 {
     type cellZone;
 cellLabels      List<label> 
-175
+174
 (
 14
 15
@@ -228,8 +226,7 @@ cellLabels      List<label>
 184
 185
 186
-221
-222
+219
 )
 ;
 }

@@ -5,4 +5,13 @@ Initial testing has been done. Works. Finer details about material properties et
 
 Measurement data by Tampere University, Building Physics team led by Juha Vinha. We have more data than is published here.
 
+
+#To compile:
+cd solvers
+./Allwmake
+
+#To test transient hamFoam (uses python3):
+cd validationAndVerification/hamFoam/
+bash runAll.sh
+
 Antti Mikkonen 2019, a.mikkonen@iki.fi

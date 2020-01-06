@@ -1,23 +1,23 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  dev                                   |
-|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       labelList;
-    note        "nPoints:896  nCells:223  nFaces:1116  nInternalFaces:222";
+    note        "nPoints:884  nCells:220  nFaces:1101  nInternalFaces:219";
     location    "constant/polyMesh";
     object      owner;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 
-1116
+1101
 (
 0
 1
@@ -31,8 +31,6 @@ FoamFile
 9
 10
 11
-11
-12
 12
 13
 13
@@ -40,7 +38,6 @@ FoamFile
 14
 15
 15
-16
 16
 17
 18
@@ -253,12 +250,12 @@ FoamFile
 7
 8
 9
+10
+11
 217
 218
 219
-220
-221
-222
+15
 16
 17
 18
@@ -470,12 +467,12 @@ FoamFile
 7
 8
 9
+10
+11
 217
 218
 219
-220
-221
-222
+15
 16
 17
 18
@@ -687,12 +684,12 @@ FoamFile
 7
 8
 9
+10
+11
 217
 218
 219
-220
-221
-222
+15
 16
 17
 18
@@ -904,12 +901,12 @@ FoamFile
 7
 8
 9
+10
+11
 217
 218
 219
-220
-221
-222
+15
 16
 17
 18
@@ -1113,27 +1110,15 @@ FoamFile
 216
 13
 14
-15
-10
-11
 12
 13
 14
-15
-10
-11
 12
 13
 14
-15
-10
-11
 12
 13
 14
-15
-10
-11
 12
 )
 
