@@ -1,0 +1,84 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include "../constant/parameters"
+
+actions
+(
+    // Zones for materials
+    {
+        name    $innerBoardLabel;
+        type    cellZoneSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0 -1 -1) ($x_innerBoard 1 1);
+        }
+    }
+
+    {
+        name    $moistureBarrierLabel;
+        type    cellZoneSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box ($x_innerBoard -1 -1) ($x_moistureBarrier 1 1);
+        }
+    }
+
+    {
+        name    $insulationLabel;
+        type    cellZoneSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box ($x_moistureBarrier -1 -1) ($x_insulation 1 1);
+        }
+    }
+
+    {
+        name    $outerBoardLabel;
+        type    cellZoneSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box ($x_insulation -1 -1) ($L 1 1);
+        }
+    }
+
+    // Sets for refinement
+    {
+        name    refine1;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box ($x_refStart -1 -1) ($x_refEnd 1 1);
+        }
+    }
+    
+
+
+
+);
+
+// ************************************************************************* //

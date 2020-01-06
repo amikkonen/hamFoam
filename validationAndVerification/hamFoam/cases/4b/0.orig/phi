@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      phi;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+#include "../constant/parameters"
+
+internalField   uniform $phi_initial;
+
+boundaryField
+{
+    insideSurface
+    {
+        type                uniformFixedValue;
+        uniformValue        tableFile;
+//        outOfBounds         clamp;
+//        interpolationScheme linear;
+        file                "constant/boundaryData/phi_insideSurface";
+    }
+
+    cavityInsideSurface
+    {
+        type                uniformFixedValue;
+        uniformValue        tableFile;
+//        outOfBounds         clamp;
+//        interpolationScheme linear;
+        file                "constant/boundaryData/phi_cavityInsideSurface";
+    }
+
+    side
+    {
+        type            empty;
+        value           $internalField;
+    }
+}
+
+// ************************************************************************* //

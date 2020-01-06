@@ -1,0 +1,75 @@
+functions
+{
+    residuals
+    {
+        type            residuals;
+        libs            ("libutilityFunctionObjects.so");
+
+        writeControl    timeStep;
+        writeInterval   1;
+        fields (T phi);
+    }
+
+    writeNow
+    {
+        action                writeNow;
+        fileName              "writeNow";
+        type                  abort;
+        functionObjectLibs    ( "libutilityFunctionObjects.so" );
+    }
+    writeNext
+    {
+        action                nextWrite;
+        fileName              "writeNext";
+        type                  abort;
+        functionObjectLibs    ( "libutilityFunctionObjects.so" );
+    }
+    fieldMinMax1
+    {
+        log                   yes;
+        write                 no;
+        location              yes;
+        functionObjectLibs    ("libfieldFunctionObjects.so");
+        type                  fieldMinMax;
+        fields                (T phi );
+    }    
+
+    sampleLine 
+    {
+        type sets;
+        functionObjectLibs ("libsampling.so");
+        setFormat raw;
+        interpolationScheme cellPoint;
+        executeControl  writeTime;
+        writeControl    writeTime;
+        sets
+        (
+            out
+            {
+                type lineCell;  
+                axis    x;
+                start   (0  0 0);
+                end     ($L 0 0);
+             }
+        );
+        fields (T phi rho cp k w Dw delta_p xi);
+    }
+
+    probes
+    {
+        libs            ("libsampling.so");
+        type            probes;
+        name            probes;
+        writeControl    timeStep;
+        writeInterval   1;
+        fields          (T phi);
+        probeLocations
+        (
+            ( $x_probeS  0     0)
+            ( $x_probeU  0     0)
+        );
+    }
+
+
+}
+
