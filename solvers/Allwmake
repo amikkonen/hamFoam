@@ -1,0 +1,9 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+wmake hamFoam
+wmake hamFoam/steadyHamFoam
+wmake thermalConductionFoam
+wmake thermalConductionFoam/steadyThermalConductionFoam
+
+# ----------------------------------------------------------------- end-of-file
