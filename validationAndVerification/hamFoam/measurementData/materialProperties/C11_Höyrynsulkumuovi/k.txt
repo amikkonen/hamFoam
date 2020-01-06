@@ -1,0 +1,4 @@
+Thermal conductivity
+RH (-), lambda (W/mK)
+0.0, 0.4
+1.0, 0.4

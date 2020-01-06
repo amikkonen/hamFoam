@@ -39,6 +39,8 @@ def get_data(label):
     #A4_Isover_RKL-EJ/wc.txt
     material_paths = glob.glob(material_root_path+"*")
     
+#    print(label, material_paths)
+    
 #    for material_path in material_paths[-4:]:
 #    for material_path in material_paths[:1]:
     
@@ -263,6 +265,10 @@ def gen_case(source, target_root, template):
 #    print(source)
     with open(source, "r") as ifile:
         data = json.load(ifile)
+    
+    
+    print([data["label"] for data  in data["materials"]])
+    return 
     
     target = os.path.join(target_root, data["id"])
     print(target)
