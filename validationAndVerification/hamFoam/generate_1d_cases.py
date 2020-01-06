@@ -35,7 +35,7 @@ s2d   = 24*60**2
 
 def get_data(label):
     
-    material_root_path = "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/"
+    material_root_path = "measurementData/materialProperties/"
     #A4_Isover_RKL-EJ/wc.txt
     material_paths = glob.glob(material_root_path+"*")
     
@@ -44,13 +44,13 @@ def get_data(label):
     
     
     hankalat = [
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/C5_Luja_A",
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/A4_Isover_RKL-EJ",
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/A7_Vital-levy",
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/A3_Isover_RKL",
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/D5_Pellavaeriste_T3",
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/A12_Tuulensuojaluja",
-            "/media/ami/laja/projects/2019_moistureTransport/pureDiffusion/measurementData/materialProperties/D3_Vital",
+            "measurementData/materialProperties/C5_Luja_A",
+            "measurementData/materialProperties/A4_Isover_RKL-EJ",
+            "measurementData/materialProperties/A7_Vital-levy",
+            "measurementData/materialProperties/A3_Isover_RKL",
+            "measurementData/materialProperties/D5_Pellavaeriste_T3",
+            "measurementData/materialProperties/A12_Tuulensuojaluja",
+            "measurementData/materialProperties/D3_Vital",
             ]
     
     for material_path in material_paths:

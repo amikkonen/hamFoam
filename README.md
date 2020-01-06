@@ -9,11 +9,11 @@ Initial testing has been done. Works. Finer details about material properties et
 Measurement data by Tampere University, Building Physics team led by Juha Vinha. We have more data than is published here.
 
 
-#To compile:
+# To compile
 cd solvers
 ./Allwmake
 
-#To test transient hamFoam:
+# To test transient hamFoam
 (for all the scripts to work, you need python3 and some packages)
 cd validationAndVerification/hamFoam/
 bash runAll.sh
