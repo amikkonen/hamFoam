@@ -11,7 +11,7 @@ from scipy import optimize
 from matplotlib import pyplot as plt
 import os
 import json
-import pyswarm
+#import pyswarm
 import shutil
 import glob
 from natsort import natsorted
