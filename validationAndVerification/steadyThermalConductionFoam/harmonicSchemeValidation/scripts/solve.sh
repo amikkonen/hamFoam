@@ -1,0 +1,1 @@
+steadyThermalConductionFoam >& log/solver

@@ -1,0 +1,58 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+//DTdefault      1; // left
+//DTchosen       2; // righth
+
+//materials // order does not matter, names does. Remember to choose all cells.
+//(
+//    material0
+//    material1
+//);
+
+
+C1 // name need to match cellZone
+{
+    rho 574; // density (kg/m^3)
+    cp  1100; // specific heat capacity (J/(kgK)) 
+    k   0.19; // thermal conductivity (W/(mK))
+}
+
+C11 // name need to match cellZone
+{
+    rho 980; // density (kg/m^3)
+    cp  2300; // specific heat capacity (J/(kgK)) 
+    k   0.4; // thermal conductivity (W/(mK))
+}
+
+D2 // name need to match cellZone
+{
+    rho 37; // density (kg/m^3)
+    cp  850; // specific heat capacity (J/(kgK)) 
+    k   0.0336; // thermal conductivity (W/(mK))
+}
+
+A3 // name need to match cellZone
+{
+    rho 73; // density (kg/m^3)
+    cp  850; // specific heat capacity (J/(kgK)) 
+    k   0.0305; // thermal conductivity (W/(mK))
+}
+
+
+// ************************************************************************* //
