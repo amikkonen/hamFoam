@@ -8,7 +8,7 @@ do
     echo "Running: cases/$i"
     cd cases/$i
     bash scripts/runall.sh
-    #tsp -N 1 -L $(pwd) bash scripts/runall.sh 
+#    tsp -N 1 -L $(pwd) bash scripts/runall.sh 
     cd ../..
 done
 

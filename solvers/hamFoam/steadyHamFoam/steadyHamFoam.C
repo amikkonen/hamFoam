@@ -90,8 +90,11 @@ int main(int argc, char *argv[])
             fvScalarMatrix phiEqn
             (
                 - fvc::laplacian(delta_p*phi*dpsDT, T)
-                - fvm::laplacian(delta_p*ps, phi)
-                - fvm::laplacian(Dw*xi, phi) // combine with abowe?
+                - fvm::laplacian(Dw*xi+delta_p*ps, phi)
+
+                 // Separated. Unstable?
+//                - fvm::laplacian(delta_p*ps, phi)
+//                - fvm::laplacian(Dw*xi, phi)
 //             ==
 //                xi*fvOptions(phi) // add suitable options
             );

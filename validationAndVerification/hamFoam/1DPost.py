@@ -454,7 +454,7 @@ if __name__ == "__main__":
     source_dir = "measurementData/byCase/json"
     comsol_root = None 
     
-    calc_roots = [
+    calc_roots = [ # "../tutWallsAll/1D_100x_10min",
                     "cases",
                   ]
     post_path = "cases"
