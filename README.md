@@ -16,12 +16,20 @@ Kalamees, T. & Vinha, J. 2003. Hygrothermal calculations and laboratory tests on
 Laukkarinen, A. & Vinha, J. 2011. Comparison of calculated and measured values of wall assembly tests using Delphin 5. Proceedings of the 9th Nordic Symposium on Building Physics, NSB 2011, Tampere, Finland, May 29 - June 2, Vol. 1, pp. 155-162.
 
 # To compile
+git clone https://github.com/amikkonen/hamFoam.git
+
+cd hamFoam
+
 cd solvers
+
 ./Allwmake
 
 # To test transient hamFoam
 (for all the scripts to work, you need python3 and some packages)
+
 cd validationAndVerification/hamFoam/
+
 bash runAll.sh
 
+# Author
 Antti Mikkonen 2019, a.mikkonen@iki.fi
