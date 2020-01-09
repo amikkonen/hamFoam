@@ -18,15 +18,11 @@ FoamFile
 ddtSchemes
 {
     default         bounded backward;
-
-    //
 }
 
 gradSchemes
 {
     default         none;
-/*    grad(T)         Gauss harmonic; // crashes...*/
-    grad(T)         Gauss linear; 
 }
 
 divSchemes
@@ -37,8 +33,6 @@ divSchemes
 laplacianSchemes
 {
     default         Gauss harmonic uncorrected;
-   laplacian((Dw*xi),phi) Gauss linear uncorrected; // floating point errror
-    
 }
 
 interpolationSchemes
